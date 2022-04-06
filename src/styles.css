@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+.container{
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius: 15px;
+    /* color:white; */
+    margin-top: 15px;
+    padding: 15px;
+  }
+
+  /* html, body {
+    min-width: 496px;
+    width: auto;
+  } */
+  
