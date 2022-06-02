@@ -1,21 +1,55 @@
 <div class="container">
-    <div class="row"> 
-      <h2>Educacion</h2>
+  <div class="row">
+    <h2>Educacion</h2>
+    <div class="d-flex justify-content-between">
+      <h3>Licencias y certificaciones</h3>
+      <button type="button" class="btn btn light" data-bs-toggle="modal" data-bs-target="#EducacionModal">
+        <i class="bi bi-plus-square"></i></button>
+    </div>
+    <div *ngFor="let educacion of educacion">
       <div class="d-flex justify-content-between">
-          <h3>Licencias y certificaciones</h3>
-          <a href=""><i class="bi bi-plus-square"></i></a>
+        <div class="d-flex justify-content-start">
+          <h5>{{educacion.nombre}}</h5>
+          <h5></h5>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button  (click)="Editar(educacion)" type="button" class="btn btn light" data-bs-toggle="modal" data-bs-target="#EducacionModal2"><i
+              class="bi bi-pencil"></i></button>
+          <button  type="button" class="btn btn light">
+            <i class="bi bi-trash"></i></button>
+           
+        </div>
+
       </div>
-      <div class="d-flex justify-content-between">
-          <div class="d-flex justify-content-start">
-              <h5>Curso básico de Python</h5>  
-          </div>
-          <div class="d-flex justify-content-end">
-            <a href=""><i class="bi bi-pencil"></i></a>
-            <a href=""><i class="bi bi-trash"></i></a>
-          </div>      
-          
-      </div>   
-      <div class="col-md-12"> <h5>Institucion</h5></div>
-      <div class="col-md-12"> <h5>Fecha</h5></div>
-    </div> 
+      <div class="col-md-12">
+        <h5>{{educacion.institucion}}</h5>
+      </div>
+      <div class="col-md-12">{{educacion.fechaIni}}-{{educacion.fechaFin}}</div>
+    </div>
   </div>
+</div>
+
+
+
+
+<!-- ELIMINAR EDUCACION -->
+ <div class="modal fade" id="EducacionModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Elimiar Educacion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p> Esta seguro ? </p>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button data-bs-dismiss="modal" class="btn btn-primary">Elimiar</button>
+      </div>
+    </div>
+  </div>
+</div> -->

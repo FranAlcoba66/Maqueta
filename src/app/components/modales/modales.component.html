@@ -1,0 +1,119 @@
+<!-- SOBRE MI / PERSONA -->
+<!-- <div class="modal fade" id="sobreMiModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sobre Mi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+
+            <label>Nombre:</label> <br/>           
+            <input type="text" name="" id=""><br/>
+            <label>Apellido:</label> <br/>
+            <input type="text" name="" id=""><br/>
+            <label>Titulo:</label><br/>
+            <input type="text" name="" id=""><br/>
+            <label>Imagen:</label><br/>
+            <input class="imagen" type="file"   placeholder="Elije una imagen">
+
+          </form>
+
+
+      
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  <!-- EDUCACION MODAL -->
+
+<!-- AGREGAREDUCACION  -->
+<div class="modal fade" id="EducacionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Educacion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form group">
+            <label>Nombre:</label> <br />
+            <input [(ngModel)]="educacion.nombre" name="educacion.nombre" type="text" id="" class="form-control"><br />
+          </div>
+          <div class="form group">
+            <label>Institucion:</label> <br />
+            <input [(ngModel)]="educacion.institucion" name="educacion.institucion" type="text" id=""
+              class="form-control"><br />
+          </div>
+          <div class="form group">
+            <label>FechaIni:</label><br />
+            <input [(ngModel)]="educacion.fechaIni" type="text" name="educacion.fechaIni" id=""
+              class="form-control"><br />
+          </div>
+          <div class="form group">
+            <label>FechaFin:</label><br />
+            <input [(ngModel)]="educacion.fechaFin" type="text" name="educacion.FechaFin" id=""
+              class="form-control"><br />
+          </div>
+
+        </form>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <!-- <button (click)="GuardarEducacion(educacion)" data-bs-dismiss="modal" class="btn btn-primary">Guardar</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- EDITAR EDUCACION -->
+<div class="modal fade" id="EducacionModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Educacion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form group">
+            <label>Nombre:</label> <br />
+            <input [(ngModel)]="educacion.nombre" name="educacion.nombre" type="text" id="" class="form-control"><br />
+          </div>
+          <div class="form group">
+            <label>Institucion:</label> <br />
+            <input [(ngModel)]="educacion.institucion" name="educacion.institucion" type="text" id=""
+              class="form-control"><br />
+          </div>
+          <div class="form group">
+            <label>FechaIni:</label><br />
+            <input [(ngModel)]="educacion.fechaIni" type="text" name="educacion.fechaIni" id=""
+              class="form-control"><br />
+          </div>
+          <div class="form group">
+            <label>FechaFin:</label><br />
+            <input [(ngModel)]="educacion.fechaFin" type="text" name="educacion.FechaFin" id=""
+              class="form-control"><br />
+          </div>
+
+        </form>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button (click)="Actualizar(educacion)" data-bs-dismiss="modal" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>

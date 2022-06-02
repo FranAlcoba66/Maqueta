@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PersonaService } from 'src/app/service/persona.service';
+import { persona } from '../model/persona.model';
+
 
 @Component({
   selector: 'app-sobre-mi',
@@ -8,10 +10,18 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class SobreMiComponent implements OnInit {
 
-  constructor(private datosPorfolio:PortfolioService) { }
+  persona:persona = new persona ("","","","","");
+
+  constructor(public PersonaService:PersonaService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos();
+    this.PersonaService.getPersona().subscribe(data=>{this.persona=data})
   }
+
+  // editarPersona(persona):{
+   
+  // }
+
+  
 
 }
